@@ -16,21 +16,32 @@
   <body>
     <div class="weather-section">
       <header>
-        <form>
-          <input type="search" placeholder="Enter a city..." required />
-          <input type="submit" />
+        <form class="search-form">
+          <input
+            type="search"
+            placeholder="Enter a city..."
+            required
+            class="search-form-input"
+          />
+          <input type="submit" value="Search" class="search-form-button" />
         </form>
       </header>
       <main>
-        <div>
-          <h1>Louis Trichardt</h1>
-          <p>
-            Wednesday, 19:00, clear skies
-            <br />
-            Humidity 67%, Wind 1.3km/h
-          </p>
+        <div class="weather-details">
+          <div>
+            <h1 class="weather-city">Louis Trichardt</h1>
+            <p class="weather-info">
+              Wednesday, 19:00, clear skies
+              <br />
+              Humidity <strong>67%</strong>, Wind <strong>1.3km/h</strong>
+            </p>
+          </div>
+          <div class="weather-info-container">
+            <div class="weather-icon">🌦️</div>
+            <div class="weather-value">15</div>
+            <div class="temp-unit">°C</div>
+          </div>
         </div>
-        <div>🌖 15°C</div>
       </main>
       <footer>
         Coded by
