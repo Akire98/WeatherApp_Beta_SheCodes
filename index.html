@@ -16,12 +16,13 @@
   <body>
     <div class="weather-section">
       <header>
-        <form class="search-form">
+        <form class="search-form" id="form-search">
           <input
             type="search"
             placeholder="Enter a city..."
             required
             class="search-form-input"
+            id="user-search-input"
           />
           <input type="submit" value="Search" class="search-form-button" />
         </form>
@@ -29,7 +30,7 @@
       <main>
         <div class="weather-details">
           <div>
-            <h1 class="weather-city">Louis Trichardt</h1>
+            <h1 class="weather-city" id="city-entered">Louis Trichardt</h1>
             <p class="weather-info">
               Wednesday, 19:00, clear skies
               <br />
@@ -57,6 +58,7 @@
         <a href="https://weathercodes.netlify.app/" target="_blank">Netlify</a>
       </footer>
     </div>
+    <script src="src/app.js"></script>
   </body>
 </html>
 
