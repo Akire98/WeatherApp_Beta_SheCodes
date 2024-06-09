@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
     <title>Weather Codes</title>
   </head>
 
@@ -30,7 +31,7 @@
       <main>
         <div class="weather-details">
           <div>
-            <h1 class="weather-city" id="city-entered">Louis Trichardt</h1>
+            <h1 class="weather-city" id="city-entered"></h1>
             <p class="weather-info">
               Wednesday, 19:00, clear skies
               <br />
@@ -39,7 +40,7 @@
           </div>
           <div class="weather-info-container">
             <div class="weather-icon">🌦️</div>
-            <div class="weather-value">15</div>
+            <div class="weather-value" id="currentTemp"></div>
             <div class="temp-unit">°C</div>
           </div>
         </div>
