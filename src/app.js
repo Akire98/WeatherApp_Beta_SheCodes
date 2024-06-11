@@ -1,9 +1,16 @@
 function pushWeatherRefresh(response) {
   let currentTemp = document.querySelector("#currentTemp");
   let temperature = response.data.temperature.current;
-  currentTemp.innerHTML = Math.round(temperature);
   let cityInputElement = document.querySelector("#city-entered");
+  //let descriptionElement = document.querySelector("#weather-description");
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind-measure");
+
+  //descriptionElement.innerHTML = response.data.conditon.description;
+  humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
+  windElement.innerHTML = `${response.data.wind.speed}km/h`;
   cityInputElement.innerHTML = response.data.city;
+  currentTemp.innerHTML = Math.round(temperature);
 }
 
 function citySearch(city) {
