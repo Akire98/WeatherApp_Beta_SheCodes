@@ -68,8 +68,9 @@ a {
 }
 
 .weather-icon {
-  font-size: 36px;
-  margin-top: 40px;
+  height: 80px;
+  width: 80px;
+  margin-top: 20px;
 }
 
 .temp-unit {

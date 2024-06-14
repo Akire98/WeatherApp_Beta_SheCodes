@@ -2,18 +2,20 @@ function pushWeatherRefresh(response) {
   let currentTemp = document.querySelector("#currentTemp");
   let temperature = response.data.temperature.current;
   let cityInputElement = document.querySelector("#city-entered");
-  //let descriptionElement = document.querySelector("#weather-description");
+  let descriptionElement = document.querySelector("#weather-description");
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind-measure");
   let timeElement = document.querySelector("#time");
   let date = new Date(response.data.time * 1000);
+  let iconElement = document.querySelector("#icon");
 
-  //descriptionElement.innerHTML = response.data.conditon.description;
+  descriptionElement.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
   windElement.innerHTML = `${response.data.wind.speed}km/h`;
   timeElement.innerHTML = formatDate(date);
   cityInputElement.innerHTML = response.data.city;
   currentTemp.innerHTML = Math.round(temperature);
+  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" alt="icon" class="weather-icon" />`;
 }
 
 function formatDate(date) {
